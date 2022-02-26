@@ -17,6 +17,10 @@ section.menu .logo {
   top: 35px;
   left: 30px;
 }
+section.menu #links-menu {
+  position: relative;
+  left: 500px;
+}
 section.menu .navbar-inverse .navbar-toggle {
   bottom: 30px;
 }
@@ -26,13 +30,10 @@ section.menu .navbar-inverse {
 section.menu .navbar-inverse .navbar-nav > li > a {
   color: #fff;
 }
-section.menu .carousel-inner {
-  background-color: red;
-}
 
 section.home-carousel .img-carousel {
   position: relative;
-  top: 121px;
+  top: 122px;
 }
 @media screen and (max-width: 912px) {
   section.home-carousel .img-carousel {
@@ -41,14 +42,30 @@ section.home-carousel .img-carousel {
   }
 }
 
-section.first-text h1 {
-  color: darkred;
+section.sobre-fotografo h1 {
+  color: palevioletred;
   text-align: center;
+  position: relative;
+  top: 10px;
 }
-section.first-text p {
+section.sobre-fotografo .fotografo {
   text-align: justify;
   position: relative;
   top: 15px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+section.first-text .text-conteudo {
+  color: darkred;
+  text-align: center;
+  position: relative;
+  top: 80px;
+}
+section.first-text .text {
+  text-align: justify;
+  position: relative;
+  top: 100px;
   margin-left: 16px;
   margin-right: 16px;
 }

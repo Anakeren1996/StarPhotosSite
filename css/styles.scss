@@ -20,6 +20,10 @@ section.menu {
     top: 35px;
     left: 30px;
   }
+  #links-menu {
+    position: relative;
+    left: 500px;
+  }
   .navbar-inverse .navbar-toggle {
     bottom: 30px;
 }
@@ -30,29 +34,44 @@ section.menu {
   .navbar-inverse .navbar-nav > li > a {
     color: #fff;
   }
-  .carousel-inner {
-    background-color: red;
-  }
 }
 section.home-carousel {
     .img-carousel {
         position: relative;
-        top: 121px;
+        top: 122px;
         @media screen and (max-width: 912px) {
             top: 142px;
             height: 487px!important;
         }
     }
 }
+
+section.sobre-fotografo {
+  h1 {
+    color: palevioletred;
+    text-align: center;
+    position: relative;
+    top: 10px;
+  }
+  .fotografo {
+    text-align: justify;
+    position: relative;
+    top: 15px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
 section.first-text {
-    h1 {
+    .text-conteudo {
         color: darkred;
         text-align: center;
+        position: relative;
+        top: 80px;
     }
-    p{
+    .text {
         text-align: justify;
         position: relative;
-        top: 15px;
+        top: 100px;
         margin-left: 16px;
         margin-right: 16px;
     }
