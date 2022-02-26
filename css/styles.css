@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+section.menu .logo {
+  width: 15vh;
+  height: auto;
+  position: relative;
+  top: 35px;
+  left: 30px;
+}
+section.menu .navbar-inverse .navbar-toggle {
+  bottom: 30px;
+}
+section.menu .navbar-inverse {
+  border: none;
+}
+section.menu .navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+}
+section.menu .carousel-inner {
+  background-color: red;
+}
+
+section.home-carousel .img-carousel {
+  position: relative;
+  top: 121px;
+}
+@media screen and (max-width: 912px) {
+  section.home-carousel .img-carousel {
+    top: 142px;
+    height: 487px !important;
+  }
+}
+
+section.first-text h1 {
+  color: darkred;
+  text-align: center;
+}
+section.first-text p {
+  text-align: justify;
+  position: relative;
+  top: 15px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+/*# sourceMappingURL=styles.css.map */
