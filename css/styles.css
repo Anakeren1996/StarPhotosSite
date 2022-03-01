@@ -91,4 +91,21 @@ section.footer {
   color: #fff;
 }
 
+.tel {
+  position: relative;
+  bottom: 2px;
+}
+
+.icone-contato {
+  max-width: 5%;
+}
+
+#contato {
+  color: #fff;
+}
+
+#contato:hover {
+  color: #fff;
+}
+
 /*# sourceMappingURL=styles.css.map */

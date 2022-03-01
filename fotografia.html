@@ -44,68 +44,76 @@
 
     <!-- INÍCIO DO MENU SUPERIOR -->
     <section class="menu">
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <!-- <div class="container"> -->
-            <img class="logo" src="img/logo_photography.jpg" alt="" />
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#links-menu"
-                    style="background-color: white;">
-                    <i class="material-icons">menu</i>
-                </button>
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                    <!-- <div class="container"> -->
+                    <img class="logo" src="img/logo_photography.jpg" alt="" />
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#links-menu"
+                            style="background-color: white;">
+                            <i class="material-icons">menu</i>
+                        </button>
+                    </div>
+
+                    <nav id="links-menu" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar">
+                            <li><a href="#">Trabalhos</a></li>
+                            <li><a href="#">Quem somos</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- </div> -->
             </div>
-
-            <nav id="links-menu" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar">
-                    <li><a href="#">Trabalhos</a></li>
-                    <li><a href="#">Quem somos</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </nav>
-
-            <!-- </div> -->
+        </div>
     </section>
     <!-- FIM DO MENU SUPERIOR -->
 
     <section class="home-carousel">
-        <!-- INÍCIO DO CAROUSEL -->
-        <div id="meuCarousel" class="carousel slide" data-ride="carousel">
-            <!-- INÍCIO DO INDICATORS -->
-            <ol class="carousel-indicators">
-                <li data-target="#meuCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#meuCarousel" data-slide-to="1"></li>
-                <!-- <li data-target="#meuCarousel" data-slide-to="2"></li> -->
-            </ol>
-            <!-- FIM DO INDICATORS -->
+        <div class="row">
+            <div class="col-md-12">
+                <!-- INÍCIO DO CAROUSEL -->
+                <div id="meuCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- INÍCIO DO INDICATORS -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#meuCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#meuCarousel" data-slide-to="1"></li>
+                        <!-- <li data-target="#meuCarousel" data-slide-to="2"></li> -->
+                    </ol>
+                    <!-- FIM DO INDICATORS -->
 
-            <!-- SLIDES -->
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img class="img-carousel" src="img/home/first-img.jpg" alt="primeiro banner home">
-                    <!-- <img class="img-mobile-home" src="img/home/first-img-mobile.jpg" alt="primeiro banner home"> -->
-                </div>
-                <div class="item">
-                    <img class="img-carousel" src="img/home/first-img.jpg" alt="segundo banner home">
-                    <!-- <img class="img-mobile-home" src="img/home/first-img-mobile.jpg" alt="segundo banner home"> -->
-                </div>
-                <!--<div class="item">
+                    <!-- SLIDES -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img class="img-carousel" src="img/home/first-img.jpg" alt="primeiro banner home">
+                            <!-- <img class="img-mobile-home" src="img/home/first-img-mobile.jpg" alt="primeiro banner home"> -->
+                        </div>
+                        <div class="item">
+                            <img class="img-carousel" src="img/home/first-img.jpg" alt="segundo banner home">
+                            <!-- <img class="img-mobile-home" src="img/home/first-img-mobile.jpg" alt="segundo banner home"> -->
+                        </div>
+                        <!--<div class="item">
                     <img class="img-carousel" src="img/home/first-img.jpg" alt="terceiro banner home">
                      <img class="img-mobile-home" src="img/home/first-img-mobile.jpg" alt="terceiro banner home">
                 </div> -->
+                    </div>
+                    <!-- FIM DOS  SLIDES -->
+
+                    <!-- FIM DO CAROUSEL -->
+
+                    <!-- controladores -->
+                    <a href="#meuCarousel" class="left carousel-control" data-slide="prev">
+                        <span class="glyphicon glyphicon-cheyron-left"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a href="#meuCarousel" class="right carousel-control" data-slide="next">
+                        <span class="glyphicon glyphicon-cheyron-right"></span>
+                        <span class="sr-only">Próximo</span>
+                    </a>
+                    <!-- controladores -->
+                </div>
             </div>
-            <!-- FIM DOS  SLIDES -->
-
-            <!-- FIM DO CAROUSEL -->
-
-            <!-- controladores -->
-            <a href="#meuCarousel" class="left carousel-control" data-slide="prev">
-                <span class="glyphicon glyphicon-cheyron-left"></span>
-                <span class="sr-only">Anterior</span>
-            </a>
-            <a href="#meuCarousel" class="right carousel-control" data-slide="next">
-                <span class="glyphicon glyphicon-cheyron-right"></span>
-                <span class="sr-only">Próximo</span>
-            </a>
-            <!-- controladores -->
         </div>
     </section>
 
@@ -145,50 +153,54 @@
                     perferendis voluptas? Quibusdam totam minima perferendis molestiae ipsa corporis numquam assumenda
                     quaerat. Expedita tempora sequi facere ratione velit?</p>
             </div>
+
         </div>
     </section>
 
 
     <!-- FOOTER -->
     <section class="footer">
-    <footer class="page-footer font-small teal pt-4">
-        <div class="container-fluid text-center text-md-left">
-            <div class="row">
-                <div class="col-md-6 mt-md-0 mt-3">
-                    <h2>Contato</h2>
-        <p>Vem falar com a gente</p>
+        <div class="row">
+            <div class="col-md-12">
+                 <footer class="page-footer font-small teal pt-4">
+                   <!-- <div class="container-fluid text-center text-md-left"> -->
+                        <class="row">
+                            <div class="col-md-6 mt-md-0 mt-3">
+                                <h2>Contato</h2>
+                                <p>Vem falar com a gente</p>
 
-        <div>
-            <img src="img/tel.png" alt="telefone">
-            <p> <a href="tel: (15) 3281-5326"> (15) 3291-5326 </a></p>
-        </div>
-        <div>
-            <img src="img/mail.png" alt="email">
-            <p> <a href="mailto:contato@mateusfotografia.com"> contato@mateusfotografia.com </a></p>
-        </div>
-                </div>
+                                <div>
+                                    <img class="icone-contato" src="img/home/icone-telefone.png" alt="telefone">
+                                    <p class="tel"> <a id="contato" href="tel: (15) 3281-5326"> (15) 3291-5326 </a></p>
+                                </div>
+                                <div>
+                                    <img class="icone-contato" src="img/home/icone-email.jpg" alt="email">
+                                    <p> <a id="contato" href="mailto:contato@mateusfotografia.com">
+                                            contato@mateusfotografia.com
+                                        </a></p>
+                                </div>
+                            </div>
 
-                <hr class="clearfix w-100 d-md-none pb-3">
+                            <hr class="clearfix w-100 d-md-none pb-3">
 
-                <div class="col-md-6 mb-md-0 mb-3">
+                            <div class="col-md-6 mb-md-0 mb-3">
 
-                    <h5 class="text-uppercase font-weight-bold">Footer text 2</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi
-                        earum
-                        commodi aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam,
-                        aspernatur id
-                        excepturi hic.</p>
-
-                </div>
+                                <h5 class="text-uppercase font-weight-bold">Nos siga nas redes sociais:</h5>
+                            </div>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-github-alt"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                    <!-- </div> -->
             </div>
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2022 Copyright</div>
+            <!-- Copyright -->
+
+            </footer>
         </div>
-
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2022 Copyright</div>
-        <!-- Copyright -->
-
-    </footer>
-</section>
+        </div>
+    </section>
     <!-- Footer -->
 
 </body>
