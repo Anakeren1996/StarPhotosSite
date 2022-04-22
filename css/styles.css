@@ -19,10 +19,32 @@ section.menu .logo {
 }
 section.menu #links-menu {
   position: relative;
-  left: 500px;
+  left: 396px;
+}
+@media screen and (max-width: 767px) {
+  section.menu #links-menu {
+    left: 285px;
+  }
+}
+@media screen and (width: 540px) {
+  section.menu #links-menu {
+    left: 396px;
+  }
 }
 section.menu .navbar-inverse .navbar-toggle {
   bottom: 30px;
+}
+@media screen and (max-width: 767px) {
+  section.menu .navbar-inverse .navbar-toggle {
+    position: relative;
+    right: 200px;
+  }
+}
+@media screen and (width: 540px) {
+  section.menu .navbar-inverse .navbar-toggle {
+    position: relative;
+    right: 300px;
+  }
 }
 section.menu .navbar-inverse {
   border: none;
@@ -41,6 +63,9 @@ section.home-carousel .img-carousel {
     height: 487px !important;
   }
 }
+section.home-carousel .carousel-indicators .active {
+  background-color: #c0c0c0;
+}
 
 section.sobre-fotografo h1 {
   font-family: "Praise", cursive;
@@ -52,22 +77,27 @@ section.sobre-fotografo h1 {
 section.sobre-fotografo .fotografo {
   text-align: justify;
   position: relative;
-  top: 80px;
+  top: 145px;
   margin-left: 16px;
   margin-right: 16px;
 }
 section.sobre-fotografo .img-fotografo {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   display: block;
   margin: 0 auto;
   position: relative;
   top: 50px;
+  cursor: pointer;
+}
+section.sobre-fotografo .img-fotografo:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 section.exibicao-fotos {
   position: relative;
-  top: 100px;
+  top: 150px;
 }
 section.exibicao-fotos .texto-exibicao {
   font-family: "Praise", cursive;
@@ -99,6 +129,13 @@ section.exibicao-fotos .snip1336 img {
   max-width: 100%;
   vertical-align: top;
   opacity: 0.85;
+  cursor: pointer;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+section.exibicao-fotos .snip1336 img:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
 }
 section.exibicao-fotos .snip1336 figcaption {
   width: 100%;
@@ -204,7 +241,7 @@ section.contato .form-group {
   left: 15%;
 }
 section.contato .btn {
-  background-color: #483D8B;
+  background-color: #483d8b;
   border-radius: 10px;
   width: 30%;
   margin-bottom: 20px;

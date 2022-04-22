@@ -58,10 +58,9 @@
 
                     <nav id="links-menu" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar">
-                            <li><a href="#">Sobre</a></li>
-                            <li><a href="#">Trabalhos</a></li>
-                            <li><a href="#">Fale conosco</a></li>
-                            <li><a href="#">Contato</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#trabalhos">Trabalhos</a></li>
+                            <li><a href="#contato">Contato</a></li>
                         </ul>
                     </nav>
 
@@ -118,7 +117,7 @@
         </div>
     </section>
 
-    <section class="sobre-fotografo">
+    <section class="sobre-fotografo" id="sobre">
         <div class="row">
             <div class="col-md-12">
                 <h1>Sobre o fotógrafo</h1>
@@ -140,53 +139,23 @@
 
     </section>
 
-    <section class="exibicao-fotos">
+    <section class="exibicao-fotos" id="trabalhos">
         <div class="row">
             <div class="col-md-12">
                 <p class="texto-exibicao">Trabalhos</p>
                 <div class="col-md-4">
                     <figure class="snip1336"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample69.jpg"
                             alt="sample69" />
-                        <!-- <figcaption>
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample5.jpg"
-                                alt="profile-sample5" class="profile" />
-                            <h2>Desmond Eagle<span>Accountant</span></h2>
-                            <p>If you want to stay dad you've got to polish your image. I think the image we need to
-                                create
-                                for you is "repentant but learning".</p>
-                            <a href="#" class="follow">Follow</a>
-                            <a href="#" class="info">More Info</a>
-                        </figcaption> -->
                     </figure>
                 </div>
                 <div class="col-md-4">
                     <figure class="snip1336 hover"><img
                             src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample74.jpg" alt="sample74" />
-                        <!-- <figcaption>
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample2.jpg"
-                                alt="profile-sample2" class="profile" />
-                            <h2>Wisteria Widget<span>Photographer</span></h2>
-                            <p>Calvin: I'm a genius, but I'm a misunderstood genius. Hobbes: What's misunderstood about
-                                you?
-                                Calvin: Nobody thinks I'm a genius.</p>
-                            <a href="#" class="follow">Follow</a>
-                            <a href="#" class="info">More Info</a>
-                        </figcaption> -->
                     </figure>
                 </div>
                 <div class="col-md-4">
                     <figure class="snip1336"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample69.jpg"
                             alt="sample69" />
-                        <!-- <figcaption>
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample5.jpg"
-                                alt="profile-sample5" class="profile" />
-                            <h2>Desmond Eagle<span>Accountant</span></h2>
-                            <p>If you want to stay dad you've got to polish your image. I think the image we need to
-                                create
-                                for you is "repentant but learning".</p>
-                            <a href="#" class="follow">Follow</a>
-                            <a href="#" class="info">More Info</a>
-                        </figcaption> -->
                     </figure>
                 </div>
             </div>
@@ -211,7 +180,7 @@
         </div>
     </section>
 
-    <section class="contato">
+    <section class="contato" id="contato">
         <div class="row">
             <div class="col-md-12">
                 <form>
@@ -255,7 +224,6 @@
         <div class="row">
             <div class="col-md-12">
                 <footer class="page-footer font-small teal pt-4">
-                    <!-- <div class="container-fluid text-center text-md-left"> -->
                     <class="row">
                         <div class="col-md-6 mt-md-0 mt-3">
                             <h2>Contato</h2>
@@ -275,14 +243,6 @@
 
                         <hr class="clearfix w-100 d-md-none pb-3">
 
-                        <div class="col-md-6 mb-md-0 mb-3">
-
-                            <h5 class="text-uppercase font-weight-bold">Nos siga nas redes sociais:</h5>
-                        </div>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-github-alt"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <!-- </div> -->
             </div>
 
             <!-- Copyright -->
@@ -303,6 +263,60 @@
             $(this).removeClass("hover");
         }
     );
+
+    // Código para o scrool suave links internos
+
+    const menuItems = document.querySelectorAll('.menu a[href^="#"]');
+
+    function getScrollTopByHref(element) {
+        const id = element.getAttribute('href');
+        return document.querySelector(id).offsetTop;
+    }
+
+    function scrollToPosition(to) {
+        // Caso queira o nativo apenas
+        // window.scroll({
+        // top: to,
+        // behavior: "smooth",
+        // })
+        smoothScrollTo(0, to);
+    }
+
+    function scrollToIdOnClick(event) {
+        event.preventDefault();
+        const to = getScrollTopByHref(event.currentTarget) - 80;
+        scrollToPosition(to);
+    }
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', scrollToIdOnClick);
+    });
+
+    function smoothScrollTo(endX, endY, duration) {
+        const startX = window.scrollX || window.pageXOffset;
+        const startY = window.scrollY || window.pageYOffset;
+        const distanceX = endX - startX;
+        const distanceY = endY - startY;
+        const startTime = new Date().getTime();
+
+        duration = typeof duration !== 'undefined' ? duration : 400;
+
+        // Easing function
+        const easeInOutQuart = (time, from, distance, duration) => {
+            if ((time /= duration / 2) < 1) return distance / 2 * time * time * time * time + from;
+            return -distance / 2 * ((time -= 2) * time * time * time - 2) + from;
+        };
+
+        const timer = setInterval(() => {
+            const time = new Date().getTime() - startTime;
+            const newX = easeInOutQuart(time, startX, distanceX, duration);
+            const newY = easeInOutQuart(time, startY, distanceY, duration);
+            if (time >= duration) {
+                clearInterval(timer);
+            }
+            window.scroll(newX, newY);
+        }, 1000 / 60); // 60 fps
+    };
 
 </script>
 
